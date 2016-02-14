@@ -1,18 +1,17 @@
-<?php include('includes/header.php') ?>
+<?php 
+	/*session_start();*/
+	if(!($_SESSION['islogged'] === true)){
+		header('Location: login.php');
+		exit();
+		}
+		if(isset($_GET['emptyFields'])){
+			echo '<p class="error">Fields can not be empty!</p>';
+}?>
+<?php include('includes/header.php')?>
 <div class="container">
 	<div class="add-form">
 		<div class="row">
 			<div class="col-md-6">
-				<?php 
-/*					session_start();
-*/					if(!($_SESSION['islogged'] === true)){
-						header('Location: login.php');
-						exit();
-					}
-					if(isset($_GET['emptyFields'])){
-					echo '<p class="error">Fields can not be empty!</p>';
-					}
-				?>
 				<form method="POST" action="add-movie-action.php" enctype="multipart/form-data">
 					<div class="form-group">
 						<label>Title</label>

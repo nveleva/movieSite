@@ -1,4 +1,5 @@
-<?php $page = basename($_SERVER['SCRIPT_NAME']); ?>
+<?php session_start();
+  $page = basename($_SERVER['SCRIPT_NAME']); ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -54,11 +55,10 @@
         </div>
         <nav role="navigation" class="collapse navbar-collapse navbar-right">
           <ul class="navbar-nav nav">
-            <li <?php if ($page == 'index.php') { ?>class="active"<?php } ?> ><a href="index.php">Home</a></li>
-            <li <?php if ($page == 'add-movie.php') { ?>class="active"<?php } ?> ><a href="add-movie.php">Add movie</a></li>
-            <li <?php if ($page == 'login.php') { ?>class="active"<?php } ?> ><a href="login.php">Login</a></li>
-            <li <?php if ($page == 'register.php') { ?>class="active"<?php } ?> ><a href="register.php">Register</a></li>
-            <?php session_start()?>
+            <li <?php if ($page == 'index.php') { ?>class="active"<?php }?>><a href="index.php">Home</a></li>
+            <li <?php if ($page == 'add-movie.php') { ?>class="active"<?php }?>><a href="add-movie.php">Add movie</a></li>
+            <li <?php if ($page == 'login.php') { ?>class="active"<?php }?>><a href="login.php">Login</a></li>
+            <li <?php if ($page == 'register.php') { ?>class="active"<?php }?>><a href="register.php">Register</a></li>
             <?php if(isset($_SESSION['islogged']) && $_SESSION['islogged']) : ?>
               <li><a href="logout-action.php">Logout</a></li>
             <?php endif; ?>
