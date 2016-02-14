@@ -66,9 +66,9 @@
           echo ' <h3>'.$row['title'].'</h3>';
           echo '<p>'.$row['type'].'</p>';
           echo '<p>'.$description.'</p>';
-          echo '<div class="btn-toolbar text-center">';
-          echo '<a href="#" role="button" class="btn btn-primary pull-right">Details</a>';
-          echo '</div></div></div></div>';
+         /* echo '<div class="btn-toolbar text-center">';
+          echo '<a href="#" role="button" class="btn btn-primary pull-right">Details</a>';*/
+          echo '</div></div></div>';
         }
 
       }else{

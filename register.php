@@ -1,6 +1,11 @@
 <?php include('includes/header.php') ?>
 <div class="container">
 	<div class="login-form">
+		<?php 
+			if(isset($_GET['matchpass'])){
+					echo '<p class="error">Password does not match!</p>';
+			}
+		?>
 		<div class="row">
 			<div class="col-md-6">
 				<form method="POST" action="register-action.php">

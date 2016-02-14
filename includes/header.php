@@ -57,6 +57,10 @@
             <li><a href="add-movie.php">Add movie</a></li>
             <li><a href="login.php">Login</a></li>
             <li><a href="register.php">Register</a></li>
+            <?php session_start()?>
+            <?php if(isset($_SESSION['islogged']) && $_SESSION['islogged']) : ?>
+              <li><a href="logout-action.php">Logout</a></li>
+            <?php endif; ?>
           </ul>
         </nav>
       </div>

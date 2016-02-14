@@ -4,7 +4,7 @@ $email = trim($_POST['email']);
 $password = trim($_POST['password']);
 $confirmPassword = trim($_POST['confirmPassword']);
 if($password !== $confirmPassword){
-	echo 'Password does not match!';
+	header('Location: register.php?matchpass');
 	exit();
 }
 $hashed_password = sha1($password);
