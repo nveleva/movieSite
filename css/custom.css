@@ -1,0 +1,7 @@
+.add-form, .login-form{
+	padding-top: 70px;
+}
+.error{
+	color: red;
+	font-weight: bold;
+}
