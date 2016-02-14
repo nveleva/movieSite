@@ -4,8 +4,8 @@
 		<div class="row">
 			<div class="col-md-6">
 				<?php 
-					session_start();
-					if(!($_SESSION['islogged'] === true)){
+/*					session_start();
+*/					if(!($_SESSION['islogged'] === true)){
 						header('Location: login.php');
 						exit();
 					}
@@ -35,7 +35,7 @@
 					<input type="file" name="img">
 					<br>
 					<div class="form-group">
-						<input type="submit" value="Add" class="btn btn-success">
+						<input type="submit" value="Add" class="btn btn-default">
 					</div>
 				</form>
 			</div>
